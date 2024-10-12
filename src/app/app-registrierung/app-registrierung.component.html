@@ -1,0 +1,24 @@
+<div class="container p-5 mt-md-5 mt-0 fs-5 text-start" style="background-color: #F8F8F8; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.07);">
+  <h2 class="mb-4 text-start">App Registrierung</h2>
+  <p class="mb-4">
+    Gib deine E-Mail-Adresse ein, um den Registrierungslink zu erhalten. Die E-Mail muss mit deinem Google Play Store-Konto verknüpft sein.
+  </p>
+
+  <p class="mb-4">
+    Teste die App auch auf <a href="https://www.presvote.com" target="_blank" class="text-primary">presvote.com</a> in der mobilen Version.
+  </p>
+
+  <!-- E-Mail-Eingabe und Button -->
+  <form (ngSubmit)="onSubmit()" class="d-flex flex-column align-items-center">
+    <input type="email" class="form-control mb-3" style="max-width: 400px;" placeholder="Deine E-Mail-Adresse" [(ngModel)]="email" name="email" required>
+    <button type="submit" class="btn btn-primary w-100 py-2" style="max-width: 400px; font-size: 1.2rem;">Registrieren</button>
+  </form>
+
+  <!-- Popup-Modal -->
+  <div *ngIf="showPopup" class="popup-overlay">
+    <div class="popup-content">
+      <p>Vielen Dank für deine Registrierung! Die Bestätigungs-E-Mail kann bis zu 48 Stunden dauern.</p>
+      <button #okButton (click)="closePopup()" class="btn btn-secondary">OK</button>
+    </div>
+  </div>
+</div>

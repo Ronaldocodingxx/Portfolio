@@ -1,0 +1,86 @@
+/* Standard Button-Stile */
+.btn {
+    min-width: 70px;
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    transition: background-color 1s ease, color 1s ease;
+    outline: none;
+}
+
+/* Hover-Effekt */
+.btn:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Fokus-Effekt vollständig deaktivieren */
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+    background-color: white;
+    color: black;
+}
+
+/* Effekt, wenn der Button auf "Kopiert!" gesetzt wird */
+.copied {
+    background-color: #007bff !important;
+    color: white !important;
+    outline: none;
+}
+
+/* Active-Effekt */
+.btn:active {
+    background-color: #007bff;
+    color: white;
+    box-shadow: none;
+}
+
+/* QR-Code Bild */
+.qr-code img {
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+/* QR-Code Modal */
+.qr-code-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.qr-code-large {
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Desktop-spezifische Anpassungen */
+@media (min-width: 769px) {
+    .btn {
+        margin-left: 20px;
+    }
+}
+
+/* Mobile-spezifische Anpassungen */
+@media (max-width: 768px) {
+    .btn {
+        width: auto;
+        margin-left: 10px;
+    }
+
+    .qr-code-large {
+        width: 300px;
+    }
+}

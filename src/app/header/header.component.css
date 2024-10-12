@@ -1,0 +1,12 @@
+    /* Hover-Effekt: Verfärbung des Link-Textes und Hintergrund */
+    .nav-link {
+      padding: 5px 10px; /* Damit der Hintergrund sichtbar wird */
+      border-radius: 5px; /* Abgerundete Ecken, wie ein Button */
+    }
+  
+    .nav-link:hover {
+      background-color: rgba(0, 0, 0, 0.2); /* Leichte Verdunklung beim Hover */
+      color: #ffc107; /* Gelber Farbwechsel beim Hover */
+    }
+
+  

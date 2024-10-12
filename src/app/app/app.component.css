@@ -1,0 +1,7 @@
+.content {
+    display: flex;
+    justify-content: center; /* Horizontale Zentrierung */
+    align-items: center; /* Vertikale Zentrierung */
+    flex: 1; /* Flexibler Inhalt, der den verfügbaren Platz einnimmt */
+  }
+  

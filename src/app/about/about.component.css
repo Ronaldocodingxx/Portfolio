@@ -1,0 +1,92 @@
+/* Standardgröße der Karte, wenn das Bild noch nicht geladen ist */
+.card {
+  width: 100%;
+  max-width: 260px;
+  min-height: 360px; /* Feste Höhe, um das Layout zu stabilisieren */
+  transition: all 0.5s ease-in-out;
+  border-radius: 15px; /* Abgerundete Ecken für die Karte */
+}
+
+.skeleton-card {
+  background-color: #f0f0f0; /* Hintergrundfarbe der Karte während des Ladevorgangs */
+  border-radius: 15px; /* Abgerundete Ecken für die Lade-Karte */
+}
+
+/* Ladeanimation für das Bild */
+.skeleton-image {
+  width: 100%;
+  height: 324px; /* Platzhalter für das Bild */
+  background: linear-gradient(100deg, #f0f0f0 30%, #e0e0e0 50%, #f0f0f0 70%);
+  background-size: 400% 100%;
+  animation: loading 1.5s infinite;
+  border-radius: 15px; /* Abgerundete Ecken für das Bild während der Ladeanimation */
+}
+
+/* Ladeanimation für den Text */
+.skeleton-text {
+  margin-top: 10px;
+}
+
+.skeleton-line {
+  height: 15px;
+  margin-bottom: 10px;
+  background: linear-gradient(100deg, #f0f0f0 30%, #e0e0e0 50%, #f0f0f0 70%);
+  background-size: 400% 100%;
+  animation: loading 1.5s infinite;
+}
+
+/* Animationseffekt für die Lade-Animation */
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Wenn das Bild geladen ist, die Karte anzeigen */
+.card-loaded {
+  background-color: white; /* Hintergrundfarbe der geladenen Karte */
+  border-radius: 15px; /* Abgerundete Ecken für die geladene Karte */
+}
+
+/* Standard-Design für Links */
+.custom-link {
+  color: blue; /* Standard-Linkfarbe blau */
+  font-weight: bold; /* Text dicker */
+  text-decoration: none; /* Kein Unterstrich */
+  position: relative;
+  background: linear-gradient(to right, black 50%, blue 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: background-position 0.3s ease; /* Schnellere Transition */
+  background-size: 200% 100%;
+  background-position: 100% 0;
+}
+
+/* Hover-Effekt für Links */
+.custom-link:hover {
+  background-position: 0 0; /* Farbwechsel bei Hover */
+}
+
+/* Media Query für mobile Geräte */
+@media (max-width: 768px) {
+  .custom-link {
+    background: none; /* Entfernt den Farbverlauf auf mobilen Geräten */
+    color: blue; /* Links bleiben blau */
+    transition: none; /* Entfernt die Transition auf mobilen Geräten */
+  }
+
+  /* Anpassung für mobile Geräte */
+  .container {
+    margin-top: 0px !important; /* Kein äußerer Abstand oben */
+    padding-top: 20px !important; /* Kleiner innerer Abstand oben */
+  }
+
+  /* Zentriere die Karte nur auf mobilen Geräten */
+  .col-md-3 {
+    justify-content: center !important; /* Zentriere die Karte */
+  }
+}

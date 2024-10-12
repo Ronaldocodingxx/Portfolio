@@ -1,0 +1,84 @@
+<div class="container-fluid d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+  <div class="row justify-content-center w-100">
+    <div class="col-12 col-md-8 col-lg-6 d-flex justify-content-center">
+      <div class="card shadow-lg p-4 w-100" style="max-width: 600px;">
+        <h3 class="card-title text-center mb-4">Registrierung</h3>
+
+        <!-- Registrierungsformular -->
+        <form (ngSubmit)="onSubmit($event)">
+
+          <!-- E-Mail-Feld -->
+          <div class="mb-3">
+            <label for="email" class="form-label">E-Mail-Adresse</label>
+            <input
+              type="email"
+              class="form-control w-100"
+              id="email"
+              [(ngModel)]="email"
+              name="email"
+              placeholder="Gib deine E-Mail-Adresse ein"
+              required
+            />
+          </div>
+
+          <!-- Passwort-Feld -->
+          <div class="mb-3">
+            <label for="password" class="form-label">Passwort</label>
+            <input
+              type="password"
+              class="form-control w-100"
+              id="password"
+              [(ngModel)]="password"
+              name="password"
+              placeholder="Gib dein Passwort ein"
+              required
+            />
+          </div>
+
+          <!-- Passwort-Bestätigungsfeld -->
+          <div class="mb-3">
+            <label for="confirmPassword" class="form-label">Passwort bestätigen</label>
+            <input
+              type="password"
+              class="form-control w-100"
+              id="confirmPassword"
+              [(ngModel)]="confirmPassword"
+              name="confirmPassword"
+              placeholder="Bestätige dein Passwort"
+              required
+            />
+          </div>
+
+          <!-- Benutzername-Feld -->
+          <div class="mb-3">
+            <label for="username" class="form-label">Benutzername</label>
+            <input
+              type="text"
+              class="form-control w-100"
+              id="username"
+              [(ngModel)]="username"
+              name="username"
+              placeholder="Wähle einen Benutzernamen"
+              required
+            />
+          </div>
+
+          <!-- Submit-Button -->
+          <div class="d-grid">
+            <button type="submit" class="btn btn-primary btn-lg w-100">
+              Registrieren
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Popup-Modal -->
+<div *ngIf="showPopup" class="popup-overlay">
+  <div class="popup-content">
+    <p>Danke für deine Registrierung! Bitte überprüfe dein E-Mail-Postfach und klicke auf den Bestätigungslink.</p>
+    <button #okButton (click)="closePopup()" class="btn btn-secondary">OK</button>
+  </div>
+</div>

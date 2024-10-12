@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+  .main-content {
+    background-color: #EFF1F5;
+    min-height: 100vh; /* Damit der Hintergrund die gesamte Höhe abdeckt */
+}
+
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Die gesamte Höhe des Viewports abdecken */
+}
+
+.content {
+  flex: 1; /* Flexibler Inhalt, der den verfügbaren Platz einnimmt */
+}
+

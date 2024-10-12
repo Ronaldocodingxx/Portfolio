@@ -1,0 +1,43 @@
+.card-hover {
+  text-decoration: none;
+  padding: 20px; /* Fügt Padding um die Karte hinzu */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  -webkit-tap-highlight-color: transparent; /* Entfernt die dunkle Farbe beim langen Drücken */
+  border-radius: 10px; /* Stellt sicher, dass die Karten immer abgerundete Ecken haben */
+}
+
+.card-hover:hover {
+  background-color: rgba(0, 0, 0, 0.05); /* Leichter Hover-Effekt */
+  cursor: pointer; /* Mauszeiger wird zur Hand */
+  transform: translateY(-10px); /* Verschiebt die Karte leicht nach oben */
+}
+
+/* Desktop-Version - Fügt zusätzlichen oberen Abstand hinzu */
+@media (min-width: 768px) {
+  .desktop-margin {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-hover {
+    padding: 10px; /* Weniger Padding auf mobilen Geräten */
+    -webkit-tap-highlight-color: transparent; /* Entfernt die dunkle Farbe beim langen Drücken */
+  }
+
+  /* Deaktiviert den Hover-Effekt auf mobilen Geräten */
+  .card-hover:hover {
+    background-color: transparent; /* Keine Hintergrundänderung beim Hover */
+    transform: none; /* Keine Bewegung nach oben */
+    cursor: default; /* Kein Zeiger-Wechsel */
+  }
+
+  .rounded-circle {
+    width: 120px;
+    height: 120px; /* Kleinere Kreise auf mobilen Geräten */
+  }
+
+  p {
+    max-width: 280px; /* Kleinere Breite für Text auf mobilen Geräten */
+  }
+}

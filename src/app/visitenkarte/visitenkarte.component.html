@@ -1,0 +1,35 @@
+<div class="container p-4 mt-md-5 mt-0 text-start bg-light shadow-sm" style="max-width: 900px; padding: 20px;">
+    <h4 class="mb-4">Cedric Häusermann</h4>
+
+    <p class="mb-2 d-flex align-items-center justify-content-between">
+      <span>
+        <strong>Telefon:</strong> +41 79 123 45 67
+      </span>
+      <button data-button="phone" (click)="copyText('+41 79 123 45 67', 'phone')" 
+              class="btn btn-outline-secondary btn-sm"
+              [ngClass]="{'copied': copiedButton === 'phone'}">
+        {{ copiedButton === 'phone' ? 'Kopiert!' : 'Copy' }}
+      </button>
+    </p>
+    
+    <p class="mb-2 d-flex align-items-center justify-content-between">
+      <span>
+        <strong>E-Mail:</strong> cedric&#64;example.com
+      </span>
+      <button data-button="email" (click)="copyText('cedric@example.com', 'email')" 
+              class="btn btn-outline-secondary btn-sm"
+              [ngClass]="{'copied': copiedButton === 'email'}">
+        {{ copiedButton === 'email' ? 'Kopiert!' : 'Copy' }}
+      </button>
+    </p>
+
+    <!-- QR Code für WhatsApp -->
+    <div class="qr-code mt-4 text-center">
+        <img src="assets/qr.jpg" alt="WhatsApp QR Code" style="width: 320px; height: auto;" (click)="showQRCode()">
+    </div>
+
+    <!-- Modal für den QR-Code Scan-Modus -->
+    <div *ngIf="showQRModal" class="qr-code-modal" (click)="hideQRCode()">
+        <img src="assets/qr.jpg" alt="WhatsApp QR Code" class="qr-code-large" />
+    </div>
+</div>

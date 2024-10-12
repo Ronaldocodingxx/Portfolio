@@ -1,0 +1,28 @@
+<div class="container p-5 mt-5 fs-5" style="background-color: #F8F8F8; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.07);"> <!-- Dezente, hellblaue Hintergrundfarbe mit minimal verstärktem Schatten -->
+  <div class="row align-items-center" style="min-height: 150px;">
+    <!-- Lade-Animation für das Bild -->
+    <div class="col-md-3 d-flex justify-content-center justify-content-md-start mb-4 mb-md-0">
+      <!-- Ladeanimation für das Bild -->
+      <div *ngIf="!isImageLoaded" class="skeleton-image"></div>
+        
+      <!-- Das tatsächliche Bild, wenn es geladen ist -->
+      <img *ngIf="isImageLoaded" [src]="imageSrc" alt="Profilbild" style="width: 100%; height: auto; border-radius: 15px;">
+    </div>
+
+    <!-- Textblock rechts, auf mobilen Geräten linksbündig -->
+    <div class="col-md-9 d-flex justify-content-center align-items-center text-md-start text-start">
+      <div style="max-width: 800px;">
+        <h2 style="margin-bottom: 1rem;">Über mich und meine Arbeit</h2>
+        <p style="margin-bottom: 1rem;">
+          Zu meinen Projekten zählen <a href="https://www.presvote.com" target="_blank" class="custom-link">presvote.com</a>, <a href="https://www.tygora.com" target="_blank" class="custom-link">tygora.com</a> und <a href="https://www.copyatsymbol.com" target="_blank" class="custom-link">copyatsymbol.com</a>, sowie eine Android-App im geschlossenen Test im Google Play Store.
+        </p>
+        <p style="margin-bottom: 1rem;">
+          Mit Technologien wie Angular, Bootstrap und Node.js entwickle ich performante Anwendungen. Ich nutze ChatGPT, um Code effizient zu erstellen und technische Aufgaben schneller zu lösen.
+        </p>
+        <p style="margin-bottom: 1rem;">
+          Meine Projekte hoste ich in der AWS Cloud für maximale Flexibilität und Skalierbarkeit.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

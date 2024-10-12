@@ -1,0 +1,18 @@
+
+
+
+
+/* Standard Hover für Desktops */
+.link-hover:hover {
+    color: #1da1f2 !important; /* Twitter-Blau beim Hover */
+    text-decoration: none !important; /* Keine Unterstreichung */
+  }
+  
+  /* Deaktiviert den Hover auf mobilen Geräten */
+  @media (max-width: 768px) {
+    .link-hover:hover {
+      color: inherit !important; /* Beibehaltung der Standardfarbe */
+      text-decoration: none !important; /* Keine Unterstreichung */
+    }
+  }
+  

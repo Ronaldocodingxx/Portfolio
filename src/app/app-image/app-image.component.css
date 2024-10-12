@@ -1,0 +1,25 @@
+.image-container {
+  position: relative;  /* Relative Positionierung des Containers */
+}
+
+.app-image {
+  position: absolute;   /* Absolute Positionierung */
+  top: 40%;             /* Vertikale Verschiebung */
+  left: 50%;            /* Horizontale Zentrierung */
+  transform: translate(-120%, -150%);  /* Exakte Zentrierung */
+  width: 170px;         /* Breite des Bildes */
+  height: auto;         /* Beibehaltung des Seitenverhältnisses */
+  border-radius: 30px;  /* Abrundung der Ecken */
+  background-color: white; /* Weißer Hintergrund */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Schatteneffekt */
+  z-index: 1;           /* Platzierung über anderen Elementen */
+  transition: box-shadow 0.3s ease; /* Smooth transition */
+  cursor: pointer;      /* Standard-Hand-Cursor */
+}
+
+/* Blende das Bild auf mobilen Geräten aus */
+@media (max-width: 768px) {
+  .app-image {
+    display: none;
+  }
+}
