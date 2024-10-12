@@ -4,7 +4,7 @@ import { Component, ElementRef, Renderer2 } from '@angular/core';
   selector: 'app-header',
   standalone: true,
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css'],
+  styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
   constructor(private el: ElementRef, private renderer: Renderer2) {}
@@ -29,5 +29,11 @@ export class HeaderComponent {
         }
       }
     });
+  }
+
+  // Methode zum Ausloggen des Benutzers
+  logout() {
+    localStorage.removeItem('access_token');  // Token entfernen
+    window.location.href = '/login';  // Leite zur Login-Seite weiter
   }
 }
